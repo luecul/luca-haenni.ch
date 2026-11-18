@@ -1,0 +1,13 @@
+title: Luca Hänni
+description: Event- & Produktionsleiter, Bern
+url: "https://luca-haenni.ch"
+markdown: kramdown
+permalink: /blog/:title/
+
+# Diese Werte gelten automatisch für jeden neuen Beitrag in _posts/
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post

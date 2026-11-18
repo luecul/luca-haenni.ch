@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
+
+<meta name="description" content="{{ page.excerpt | strip_html | truncate: 150 | default: site.description }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 150 | default: site.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-logo" href="{{ '/' | relative_url }}">Luca Hänni</a>
+    <nav class="site-nav">
+      <a href="{{ '/' | relative_url }}#ueber-mich">Über mich</a>
+      <a href="{{ '/' | relative_url }}#erfahrung">Erfahrung</a>
+      <a href="{{ '/' | relative_url }}#skills">Skills</a>
+      <a href="{{ '/' | relative_url }}#projekte">Projekte</a>
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a href="{{ '/' | relative_url }}#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  {{ content }}
+</main>
+
+<footer class="footer">
+  <p>&copy; {{ 'now' | date: "%Y" }} Luca Hänni</p>
+</footer>
+
+</body>
+</html>
