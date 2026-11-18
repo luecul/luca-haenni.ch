@@ -2,7 +2,7 @@
 layout: default
 ---
 <article class="section post">
-  <p class="post-meta">{{ page.date | date: "%d.%m.%Y" }}</p>
+  <p class="post-meta">{{ page.date | date: "%d.%m.%Y" }}{% if page.event %} · {{ page.event }}{% endif %}{% if page.genre %} · {{ page.genre }}{% endif %}{% if page.location %} · {{ page.location }}{% endif %}</p>
   <h1 class="post-title">{{ page.title }}</h1>
   <div class="post-content">
     {{ content }}
