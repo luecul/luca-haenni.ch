@@ -25,11 +25,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 
 /* ===== LOGO-INTRO (Bühnenlicht) – Farben hier anpassen ===== */
 :root{--intro-bg:#8d0b0b;--intro-fg:#e7e3dd}
-#logo-intro{position:fixed;inset:0;z-index:9999;background:#050505;display:flex;align-items:center;justify-content:center;cursor:pointer}
+#logo-intro{position:fixed;inset:0;z-index:9999;background:var(--intro-bg);display:flex;align-items:center;justify-content:center;cursor:pointer}
 #logo-intro .fly{line-height:0;transform-origin:0 0}
 #logo-intro svg{height:min(62vh,560px);width:auto;overflow:visible}
 #logo-intro path.ltr{fill:var(--light)}
-#logo-intro #li-cone{fill:url(#li-coneG);opacity:0;filter:url(#li-soft)}
+#logo-intro #li-cone{opacity:0}
 #logo-intro #li-pool{fill:url(#li-poolG);opacity:0}
 /* ===== Ende Intro-CSS ===== */
 
